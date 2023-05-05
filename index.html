@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordeon</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="accordeon">
+        <div class="contentBox"><h1>Beneficios del vehiculo eléctrico</h1></div>
+
+        <div class="contentBox">
+            <div class="label">Costos de operación reducidos</div>
+            <div class="content">
+                <p>Los coches eléctricos son más eficientes en términos de energía que los coches de gasolina o diésel, lo que significa que pueden ser menos costosos de operar a largo plazo. Además, la electricidad es generalmente más barata que la gasolina o el diésel.</p>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="label">Emisiones reducidas</div>
+            <div class="content">
+                <p>Los coches eléctricos no emiten dióxido de carbono ni otros gases contaminantes, lo que significa que son más respetuosos con el medio ambiente que los coches con motor de combustión interna.</p>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="label">Mantenimiento más simple</div>
+            <div class="content">
+                <p>Los coches eléctricos no tienen tantas piezas móviles como los coches de gasolina o diésel, lo que significa que pueden requerir menos mantenimiento a largo plazo. Por ejemplo, no necesitan cambios de aceite ni cambios de filtro de aire.</p>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="label">Rendimiento mejorado</div>
+            <div class="content">
+                <p>Los coches eléctricos a menudo tienen un rendimiento superior en términos de aceleración y velocidad máxima en comparación con los coches de gasolina o diésel.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            const boxes = document.querySelectorAll('.contentBox');
+            boxes.forEach(box => {
+            box.addEventListener('click', () => {
+                if (box.classList.contains('active')) {
+                box.classList.remove('active');
+                } else {
+                box.classList.add('active');
+                }
+            });
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #bedfe8;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+.accordeon {
+    width: 800px;
+    
+}
+
+.accordeon .contentBox {
+    position: relative;
+    margin: 20px 20px;
+}
+
+.accordeon .contentBox .label {
+    position: relative;
+    padding: 16px;
+    background-color: #2694af;
+    color: white;
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.accordeon .contentBox .label:hover {
+    background-color: #23788e;
+
+    
+}
+
+
+.accordeon .contentBox .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+.accordeon .contentBox.active .label::before {
+    content: '-';
+    font-size: 2rem;
+}
+
+.accordeon .contentBox .content {
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    overflow-y: auto;
+    font-size: 24px;
+}
+
+.accordeon .contentBox.active .content {
+    height: auto;
+    padding: 16px;
+}
